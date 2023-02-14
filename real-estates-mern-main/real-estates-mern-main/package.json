@@ -1,0 +1,43 @@
+{
+  "name": "real-estates-mern",
+  "version": "1.0.0",
+  "description": "MERN Real Estates App",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node ./backend/server.js",
+    "server": "nodemon backend/server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KenanDropic/real-estates-mern.git"
+  },
+  "author": "Kenan Dropić",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KenanDropic/real-estates-mern/issues"
+  },
+  "homepage": "https://github.com/KenanDropic/real-estates-mern#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^1.30.0",
+    "colors": "^1.4.0",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-async-handler": "^1.2.0",
+    "express-mongo-sanitize": "^2.2.0",
+    "hpp": "^0.2.3",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^6.4.6",
+    "morgan": "^1.10.0",
+    "nodemailer": "^6.7.5",
+    "xss-clean": "^0.1.1"
+  },
+  "devDependencies": {
+    "concurrently": "^7.2.1",
+    "nodemon": "^2.0.20"
+  }
+}
